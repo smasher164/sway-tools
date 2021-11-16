@@ -32,7 +32,7 @@
         };
       in
       {
-        packages.pw-platform = pkgs.rustPlatform.buildRustPackage {
+        packages.pw-volume = pkgs.rustPlatform.buildRustPackage {
           name = "pw-volume";
           src = ./pw-volume/.;
           cargoLock.lockFile = ./pw-volume/Cargo.lock;
