@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/smasher164/pw-volume
+	branch = main
+	commit = 40e1e936234b30adf9b34a3db7e318a5f6cf431b
+	parent = f8bcadf8579d15bc69711a371b21a146e1a6d746
+	method = merge
+	cmdver = 0.4.1
