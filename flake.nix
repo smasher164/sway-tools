@@ -8,7 +8,6 @@
   outputs = { self, nixpkgs, flake-utils }:
     let supportedSystems = [
       "aarch64-linux"
-      "i686-linux"
       "x86_64-linux"
     ]; in
     flake-utils.lib.eachSystem supportedSystems (system:
@@ -45,6 +44,15 @@
             pkgs.rustfmt
             vscode-with-extensions
           ];
+          shellHook = ''
+            function release() {
+              if [ "$#" -ne 1 ] || ([ $1 != "x86_64-musl" ] && [ $1 != "aarch64-musl" ]); then
+                echo "Usage: release [ x86_64-musl | aarch64-musl ]"
+                return 1
+              fi
+              sudo docker run --rm -it -v $PWD:/home/rust/src messense/rust-musl-cross:$1 cargo build --release
+            }
+          '';
         };
       });
 }
