@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://github.com/smasher164/pw-volume
 	branch = main
-	commit = c46caa3de0201b9379075f330dae12647e3c7618
-	parent = da54057cb54864c3342b6ae6de4c879430a36366
+	commit = 498a6ac63f84861ca771c73125e50e77be057c24
+	parent = 7a91bea846f860bb4af81aa7f14b33ccac3bd678
 	method = merge
 	cmdver = 0.4.1
