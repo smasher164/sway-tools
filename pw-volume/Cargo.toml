@@ -1,13 +1,19 @@
 [package]
 name = "pw-volume"
-version = "0.1.0"
+version = "0.4.0"
 edition = "2018"
+readme = "README.md"
+description = "Basic interface to PipeWire volume controls"
+repository = "https://github.com/smasher164/pw-volume"
+license = "MIT"
+keywords = ["pipewire", "volume"]
+categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 serde = { version = "1.0.130", features = ["derive"] }
-serde_json = "1.0.70"
+serde_json = "1.0.79"
 clap = "2.33.3"
 anyhow = "1.0.56"
 
